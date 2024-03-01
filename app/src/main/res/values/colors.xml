@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="principal">#06060D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="contrast">#910A67</color>
+    <color name="calendar">#49454F</color>
+    <color name="date">#E6E0E9</color>
+    <color name="editDate">#CAC4D0</color>
+    <color name="block">#DBCEE0</color>
+    <color name="text">#D5D6E0</color>
 </resources>

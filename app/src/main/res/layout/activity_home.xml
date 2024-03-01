@@ -9,6 +9,7 @@
     tools:context=".HomeActivity">
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="476px"
         android:layout_height="520px"
         android:layout_marginStart="61dp"
@@ -23,4 +24,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.41" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="171dp"
+        android:background="@drawable/background_button_home"
+        android:backgroundTint="@color/contrast"
+        android:fontFamily="@font/inter"
+        android:text="CRIAR DIÁRIO"
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
