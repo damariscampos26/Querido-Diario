@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Querido Diario</string>
+    <string name="buttonHome">CRIAR DIÁRIO</string>
+    <string name="text_conta_nova">Criar um novo diário!</string>
 </resources>

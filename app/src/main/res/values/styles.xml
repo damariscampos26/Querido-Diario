@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+
+        <item name="android:background">@color/contrast</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">50px</item>
+    </style>
+    <style name="TextUsuario">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:hint">Usuário</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+    <style name="TextSenha">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:hint">Senha</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="TextRefazerSenha">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:hint">Repita a senha</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+</resources>
