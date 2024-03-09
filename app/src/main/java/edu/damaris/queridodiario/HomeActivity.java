@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
                     imageView.setImageResource(R.drawable.error__4_);
 
                     TextView textView = layout.findViewById(R.id.textToast);
-                    textView.setText("Preencha todos os campos!");
+                    textView.setText(R.string.campos_vazios);
 
                     Toast toast = new Toast(getApplicationContext());
                     toast.setDuration(Toast.LENGTH_SHORT);
