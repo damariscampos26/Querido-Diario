@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/textLogin"
         android:layout_width="360px"
-        android:layout_height="800px"
+        android:layout_height="200dp"
         android:layout_marginStart="126dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="126dp"
@@ -29,38 +29,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/editTextUsuario"
-        android:layout_width="355dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:hint="Usuário"
-        android:paddingTop="3px"
-        android:gravity="start|top"
-        android:inputType="textPersonName|none"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--    <EditText-->
-<!--        android:id="@+id/editTextUsuario"-->
-<!--        android:layout_width="900px"-->
-<!--        android:layout_height="59px"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        android:backgroundTint="@color/white"-->
-<!--        android:ems="10"-->
-<!--        android:gravity="start|top"-->
-<!--        android:hint="Usuário"-->
-<!--        android:textColorHint="@color/white"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
