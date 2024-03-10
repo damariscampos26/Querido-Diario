@@ -3,15 +3,13 @@
     <style name="Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">30dp</item>
-        <item name="android:layout_marginRight">30dp</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:background">@drawable/background_button_home</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">40px</item>
+        <item name="android:textSize">15sp</item>
     </style>
     <style name="TextUsuario">
-        <item name="android:textColor">@color/text</item>
+        <item name="android:textColor">@color/white_light</item>
         <item name="android:hint">Usuário</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="android:textSize">15dp</item>
@@ -20,20 +18,43 @@
     <style name="EditText">
         <item name="android:textColor">@color/white</item>
         <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="TextSenha">
-        <item name="android:textColor">@color/text</item>
+        <item name="android:textColor">@color/white_light</item>
         <item name="android:hint">Senha</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="android:textSize">15dp</item>
+        <item name="android:layout_gravity">center</item>
     </style>
     <style name="TextRefazerSenha">
-        <item name="android:textColor">@color/text</item>
+        <item name="android:textColor">@color/white_light</item>
         <item name="android:hint">Repita a senha</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="android:textSize">15dp</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
+    <style name="TextLogin">
+        <item name="android:hint">Login</item>
+        <item name="android:textColor">@color/white_light</item>
+        <item name="android:textColorHint">@color/white_light</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="TextDiario">
+        <item name="android:hint">Crie seu\ndiário</item>
+        <item name="android:textColor">@color/white_light</item>
+        <item name="android:textColorHint">@color/white_light</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 
 </resources>
