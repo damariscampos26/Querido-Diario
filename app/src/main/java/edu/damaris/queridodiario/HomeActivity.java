@@ -45,6 +45,8 @@ public class HomeActivity extends AppCompatActivity {
                     toast.setDuration(Toast.LENGTH_SHORT);
                     toast.setView(layout);
                     toast.show();
+                }else {
+
                 }
             }
         });
