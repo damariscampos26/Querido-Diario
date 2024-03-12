@@ -2,14 +2,15 @@ package edu.damaris.queridodiario;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import androidx.annotation.Nullable;
+
 public class DataBase extends SQLiteOpenHelper {
-    public static final String NOME = "dataBase";
-    public DataBase(Context context, String dataBase, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, dataBase, factory, 1);
+//    public static final String NOME = "database";
+    public DataBase(Context context) {
+        super(context, "dataBase", null, 1);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -35,5 +36,12 @@ public class DataBase extends SQLiteOpenHelper {
         contentValues.put("senha", senha);
         long inserir = database.insert("usuario", null, contentValues);
         return inserir != -1;
+    }
+    public Boolean verificarSenha(String nome, String senha){
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query("usuario", new String[]{nome, senha}, nome + "=? AND " + senha + "=?", new String[]{nome, senha}, null, null, null, null);
+        boolean senhaCorreta = cursor.getCount() >0;
+        cursor.close();
+        return senhaCorreta;
     }
 }

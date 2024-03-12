@@ -4,4 +4,6 @@
     <string name="text_conta_nova">Criar um novo diário!</string>
     <string name="todo">TODO</string>
     <string name="campos_vazios">Preencha todos os campos!</string>
+    <string name="senhas_diferentes">Senhas nãos são iguais!</string>
+    <string name="login">ENTRAR</string>
 </resources>
