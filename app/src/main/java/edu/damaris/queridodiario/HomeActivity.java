@@ -50,34 +50,51 @@ public class HomeActivity extends AppCompatActivity {
                     toast.setDuration(Toast.LENGTH_SHORT);
                     toast.setView(layout);
                     toast.show();
+                } else {
+                    if (!senha1.equals(senha2)) {
+                        LayoutInflater layoutInflater = getLayoutInflater();
 
-                } else if (!senha1.equals(senha2)){
-                    LayoutInflater layoutInflater = getLayoutInflater();
-                    View layout = layoutInflater.inflate(R.layout.custom_toast2, findViewById(R.id.containerToast2));
+                        View layout = layoutInflater.inflate(R.layout.custom_toast2, findViewById(R.id.containerToast2));
 
-                    ImageView imageView = layout.findViewById(R.id.toastError);
-                    imageView.setImageResource(R.drawable.error__4_);
+                        ImageView imageView = layout.findViewById(R.id.toastError);
+                        imageView.setImageResource(R.drawable.error__4_);
 
-                    TextView textView = layout.findViewById(R.id.textToast2);
-                    textView.setText(R.string.senhas_diferentes);
+                        TextView textView = layout.findViewById(R.id.textToast2);
+                        textView.setText(R.string.senhas_diferentes);
 
-                    Toast toast = new Toast(getApplicationContext());
-                    toast.setDuration(Toast.LENGTH_SHORT);
-                    toast.setView(layout);
-                    toast.show();
-                }else  {
-                    ContentValues contentValues = new ContentValues();
-                    contentValues.put("nome", nome);
-                    contentValues.put("senha", senha1);
+                        Toast toast = new Toast(getApplicationContext());
+                        toast.setDuration(Toast.LENGTH_SHORT);
+                        toast.setView(layout);
+                        toast.show();
+                    }else {
+                        boolean usuarioExiste = dataBase.verificarUsuario(nome);
+                        if (usuarioExiste){
+                            Toast.makeText(HomeActivity.this, "Usuario já existe!", Toast.LENGTH_SHORT).show();
+                        }else {
+                            boolean inseridoComSucesso = dataBase.inserirDadosUsuario(nome, senha1);
+                            if (inseridoComSucesso){
+                                LayoutInflater layoutInflater1 = getLayoutInflater();
+                                View layout1 = layoutInflater1.inflate(R.layout.custom_toast3, findViewById(R.id.containerToast3));
 
-                    SQLiteDatabase database = dataBase.getWritableDatabase();
-                    database.insert("usuario", null, contentValues);
-                    database.close();
+                                ImageView imageView1 = layout1.findViewById(R.id.toastSucesso);
+                                imageView1.setImageResource(R.drawable.check);
 
-                    Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                }
-            }
-        });
+                                TextView textView1 = layout1.findViewById(R.id.textToast3);
+                                textView1.setText(R.string.sucesso);
+
+                                Toast toast1 = new Toast(getApplicationContext());
+                                toast1.setDuration(Toast.LENGTH_SHORT);
+                                toast1.setView(layout1);
+                                toast1.show();
+
+                                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                            }
+                            else {
+                                Toast.makeText(HomeActivity.this, "Erro ao inserir usuario!", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }
+
     }
-}
+};});}}

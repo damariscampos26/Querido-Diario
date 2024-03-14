@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class DataBase extends SQLiteOpenHelper {
-//    public static final String NOME = "database";
+    public static final String NOME = "database";
     public DataBase(Context context) {
-        super(context, "dataBase", null, 1);
+        super(context, "dataBase", null, 2);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -23,13 +23,13 @@ public class DataBase extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         try {
-            db.execSQL("drop TABLE if exists usuario");
+            db.execSQL("drop Table if exists usuario");
             onCreate(db);
         }catch (Exception e){
             Log.e("Erro no banco: ", e.getMessage());
         }
     }
-    public Boolean inserirDados(String nome, String senha){
+    public Boolean inserirDadosUsuario(String nome, String senha){
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("nome", nome);
@@ -37,11 +37,10 @@ public class DataBase extends SQLiteOpenHelper {
         long inserir = database.insert("usuario", null, contentValues);
         return inserir != -1;
     }
-    public Boolean verificarSenha(String nome, String senha){
+
+    public Boolean verificarUsuario(String nomeUsuario){
         SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.query("usuario", new String[]{nome, senha}, nome + "=? AND " + senha + "=?", new String[]{nome, senha}, null, null, null, null);
-        boolean senhaCorreta = cursor.getCount() >0;
-        cursor.close();
-        return senhaCorreta;
+        Cursor cursor = database.rawQuery("Select * from usuario where nome =?", new String[]{nomeUsuario});
+        return (cursor.getCount() > 0);
     }
 }
