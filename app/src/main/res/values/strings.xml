@@ -2,9 +2,12 @@
     <string name="app_name">Querido Diario</string>
     <string name="buttonHome">CRIAR DIÁRIO</string>
     <string name="text_conta_nova">Criar um novo diário!</string>
+    <string name="faça_login">Já tem um diário? Faça login.</string>
     <string name="todo">TODO</string>
     <string name="campos_vazios">Preencha todos os campos!</string>
     <string name="senhas_diferentes">As senhas são diferentes!</string>
     <string name="login">ENTRAR</string>
     <string name="sucesso">Cadastro realizado!</string>
+    <string name="usuario_existente">Usuário já existe!</string>
+    <string name="erro_ao_inserir">Erro ao inserir usuário!</string>
 </resources>

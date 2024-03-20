@@ -10,7 +10,7 @@
     android:id="@+id/containerToast"
     android:background="@drawable/toast_error">
     <ImageView
-        android:id="@+id/toastError"
+        android:id="@+id/toast"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:src="@drawable/error__4_"
@@ -38,6 +38,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.333" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
