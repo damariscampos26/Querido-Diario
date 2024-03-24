@@ -10,7 +10,7 @@ import android.util.Log;
 public class DataBase extends SQLiteOpenHelper {
     public static final String NOME = "database";
     public DataBase(Context context) {
-        super(context, "dataBase", null, 2);
+        super(context, "dataBase", null, 3);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -37,10 +37,14 @@ public class DataBase extends SQLiteOpenHelper {
         long inserir = database.insert("usuario", null, contentValues);
         return inserir != -1;
     }
-
     public Boolean verificarUsuario(String nomeUsuario){
         SQLiteDatabase database = this.getReadableDatabase();
         Cursor cursor = database.rawQuery("Select * from usuario where nome =?", new String[]{nomeUsuario});
+        return (cursor.getCount() > 0);
+    }
+    public Boolean obterDados(String nomeUsuario, String senha1){
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.rawQuery("Select * from usuario where nome =? and senha =?", new String[]{nomeUsuario, senha1});
         return (cursor.getCount() > 0);
     }
 }
