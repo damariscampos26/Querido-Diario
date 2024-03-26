@@ -16,6 +16,7 @@ public class DataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         try {
             db.execSQL("create Table usuario(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, senha VARCHAR(256))");
+            db.execSQL("create Table diario(id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, texto TEXT)");
         }catch (Exception e) {
             Log.e("Erro no banco: ", e.getMessage());
         }
@@ -24,6 +25,7 @@ public class DataBase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         try {
             db.execSQL("drop Table if exists usuario");
+            db.execSQL("drop Table if exists diario");
             onCreate(db);
         }catch (Exception e){
             Log.e("Erro no banco: ", e.getMessage());
